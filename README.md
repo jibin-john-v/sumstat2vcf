@@ -14,7 +14,7 @@ Sumstat2VCF is a wrapper script designed to efficiently convert Genome-Wide Asso
   * Target FASTA file (for liftover, optional)
   * Chain file (for liftover, optional)
 
-## Running gwas2vcf
+## Running sumstat2vcf
 
 The command provided uses Docker to run sumstat2vcf. Below is the command to execute and an explanation of each parameter:
 
