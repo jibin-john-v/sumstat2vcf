@@ -19,7 +19,7 @@ Sumstat2VCF is a wrapper script designed to efficiently convert Genome-Wide Asso
 The command provided uses Docker to run sumstat2vcf. Below is the command to execute and an explanation of each parameter:
 
 ```
-nohup docker run --rm \
+docker run --rm \
     -v /mnt/disks/sdd/:/mnt/disks/sdd/ \
     -v /home/jjohn41/:/home/jjohn41/ \
     --user $(id -u):$(id -g) \
@@ -43,13 +43,11 @@ nohup docker run --rm \
     --target_fasta /mnt/disks/sdd/sumstat_folder/Homo_sapiens.GRCh38.dna.primary_assembly.fa \
     --chain_file /mnt/disks/sdd/sumstat_folder/GRCh37_to_GRCh38.chain.gz \
     --liftover Yes \
-    > /mnt/disks/sdd/sumstat_folder/vcf_files/sumstat2vcf_nohup_log.txt 2>&1 & `
+    > /mnt/disks/sdd/sumstat_folder/vcf_files/sumstat2vcf_nohup_log.txt 2>&1
 ```
 
 # Explanation of Command Parameters
 
-* nohup: Runs the command in the background, allowing you to close the terminal without stopping the process.
-* nohup: Runs the command in the background, allowing you to close the terminal without stopping the process.
 * docker run --rm: Runs a Docker container and removes it after the command finishes.
 * -v /mnt/disks/sdd/:/mnt/disks/sdd/: Mounts the host directory to the container directory.
 * -v /home/jjohn41/:/home/jjohn41/: Mounts another host directory to the container directory.
