@@ -4,8 +4,8 @@ nohup docker run --rm \
     -v /mnt/disks/sdd/:/mnt/disks/sdd/ \
     -v /home/jjohn41/:/home/jjohn41/ \
     --user $(id -u):$(id -g) \
-    jibinjv/gwas2vcf:v5 \
-    python3 `pwd`/sumstat_to_vcf.py \
+    jibinjv/sumstat2vcf:v1 \
+    python3 `/home/jjohn41/sumstat_to_vcf.py \
     --sumstat_file /mnt/disks/sdd/BrainImage_CLusterMetaSumstat/GPCA_Clusters/dbscan_clust_${index}_GenomicPCA_Correlation.N_weighted_GWAMA.results.txt.gz \
     --column_dict /mnt/disks/sdd/BrainImage_CLusterMetaSumstat/GPCA_Clusters/gwas_column.txt \
     --fasta /mnt/disks/sdd/BrainImage_CLusterMetaSumstat/GPCA_Clusters/human_g1k_v37.fasta \
