@@ -23,7 +23,7 @@ nohup docker run --rm \
     -v /mnt/disks/sdd/:/mnt/disks/sdd/ \
     --user $(id -u):$(id -g) \
     jibinjv/gwas2vcf:v5 \
-    python3 `pwd`/sumstat_to_vcf.py \
+    python3 /mnt/disks/sdd/scripts/sumstat_to_vcf.py \
     --sumstat_file /mnt/disks/sdd/sumstat_folder/dbscan_clust_GenomicPCA_Correlation.N_weighted_GWAMA.results.txt.gz \
     --column_dict /mnt/disks/sdd/sumstat_folder/gwas_column.txt \
     --fasta /mnt/disks/sdd/sumstat_folder/human_g1k_v37.fasta \
@@ -54,7 +54,7 @@ nohup docker run --rm \
 * -v /home/jjohn41/:/home/jjohn41/: Mounts another host directory to the container directory.
 * --user $(id -u):$(id -g): Runs the Docker container with the current user's ID and group ID to avoid permission issues.
 * jibinjv/gwas2vcf:v5: Specifies the Docker image to use.
-* python3 \pwd `/sumstat_to_vcf.py`: Path of the Python script.
+* /mnt/disks/sdd/scripts/sumstat_to_vcf.py: Path of the Python script.
 * --sumstat_file: Specifies the GWAS summary statistics file with the full path.
 * --column_dict: Specifies the column dictionary file in JSON format with the full path.
 * --fasta: Specifies the reference genome FASTA file with the full path.
