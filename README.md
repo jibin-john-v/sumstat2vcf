@@ -21,7 +21,6 @@ The command provided uses Docker to run sumstat2vcf. Below is the command to exe
 ```
 nohup docker run --rm \
     -v /mnt/disks/sdd/:/mnt/disks/sdd/ \
-    -v /home/jjohn41/:/home/jjohn41/ \
     --user $(id -u):$(id -g) \
     jibinjv/gwas2vcf:v5 \
     python3 `pwd`/sumstat_to_vcf.py \
@@ -30,7 +29,7 @@ nohup docker run --rm \
     --fasta /mnt/disks/sdd/sumstat_folder/human_g1k_v37.fasta \
     --dbsnp /mnt/disks/sdd/sumstat_folder/dbsnp.v153.b37.vcf.gz \
     --aliasfile NA \
-    --gwas_outputname Cluster_${index}_GPCA_CORR \
+    --gwas_outputname Cluster_GPCA_CORR \
     --output_folder /mnt/disks/sdd/sumstat_folder/vcf_files/ \
     --ncontrol 40000 \
     --ncase 30000 \
