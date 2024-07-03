@@ -1,0 +1,19 @@
+{
+    "chr_col": "CHR",
+    "pos_col": "BP",
+    "snp_col": "SNPID",
+    "ea_col": "OA",
+    "oa_col": "EA",
+    "beta_col": "BETA",
+    "se_col": "SE",
+    "pval_col": "PVAL",
+    "eaf_col": "EAF",
+    "ncontrol_col": "N_eff",
+    "ncase_col": "NA",
+    "imp_z_col": "Z",
+    "imp_info_col": "NA",
+    "delimiter": "\t",
+    "header": true,
+    "build": "GRCh37"
+}
+
